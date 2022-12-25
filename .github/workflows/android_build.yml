@@ -20,7 +20,7 @@ jobs:
       - name: upload to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:
-          appName: dastageerb44/apps/BookStore
+          appName: dastageerb44/BookStore
           token: ${{secrets.APP_CENTER_TOKEN}}
           group: testers
           file: app/build/outputs/apk/debug/app-debug.apk

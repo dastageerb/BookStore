@@ -15,7 +15,7 @@ jobs:
         run: ./gradlew test
 
       - name: build debug apk
-          run: ./gradlew assembleDebug
+        run: ./gradlew assembleDebug
       - name: upload to App Center
         uses: wzieba/AppCenter-Github-Action@v1
         with:

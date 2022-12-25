@@ -14,7 +14,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        buildConfigField("String","AppCenterSecretKey",appCenterSecretKey)
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
             useSupportLibrary true
@@ -22,9 +22,15 @@ android {
     }
 
     buildTypes {
+        debug {
+            versionNameSuffix ".dev"
+            debuggable true
+        }
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     compileOptions {
@@ -63,11 +69,4 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 
     implementation "androidx.navigation:navigation-compose:$nav_version"
-
-
-    // app center
-
-    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
-    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
-
 }

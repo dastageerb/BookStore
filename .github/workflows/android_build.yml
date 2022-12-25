@@ -14,6 +14,14 @@ jobs:
       - name: Run Tests
         run: ./gradlew test
 
-      - name: Build Project
-        run: ./gradlew assemble
-
+      - name: build debug apk
+          run: ./gradlew assembleDebug
+      - name: upload to App Center
+        uses: wzieba/AppCenter-Github-Action@v1
+        with:
+          appName: dastageerb44/apps/BookStore
+          token: ${{secrets.APP_CENTER_TOKEN}}
+          group: testers
+          file: app/build/outputs/apk/debug/app-debug.apk
+          notifyTesters: true
+          debug: false

@@ -19,33 +19,9 @@ import com.portfolio.bookstore.ui.theme.BookStoreTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        AppCenter.start(
-            application, BuildConfig.AppCenterSecretKey,
-            Analytics::class.java, Crashes::class.java
-        )
         setContent {
             BookStoreTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colors.background
-                ) {
-                    Greeting("Android")
-                }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    BookStoreTheme {
-        Greeting("Android")
     }
 }

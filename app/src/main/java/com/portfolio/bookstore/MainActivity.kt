@@ -8,10 +8,12 @@ import com.portfolio.bookstore.ui.theme.BookStoreTheme
 
 class MainActivity : ComponentActivity() {
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             BookStoreTheme {
+
             }
         }
     }

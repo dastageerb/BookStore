@@ -1,4 +1,4 @@
-package com.portfolio.bookstore.ui.theme
+package com.portfolio.bookstore.presentation.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

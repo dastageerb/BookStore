@@ -24,7 +24,7 @@ fun ButtonLarge(text:String, modifier: Modifier, onclick:()-> Unit) {
         .clip(RoundedCornerShape(8.dp))
         .background(color = MaterialTheme.colors.primary),
         //colors = ButtonDefaults.buttonColors(MaterialTheme.colors.primary),
-        onClick = { onclick.invoke() }) {
+        onClick = { onclick() }) {
         ButtonText(text = text)
     }
 }

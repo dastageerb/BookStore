@@ -1,4 +1,4 @@
-package com.portfolio.bookstore.ui.theme
+package com.portfolio.bookstore.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 
